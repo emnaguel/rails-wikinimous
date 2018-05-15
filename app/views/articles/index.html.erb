@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">Wikinimous</a>
+  <form class="form-inline">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">New article</button>
+  </form>
+</nav>
+
+<ul class="list-group"><% @articles.each do |article| %>
+<li class="list-group-item text-primary"><%= link_to article.title, article_path(article) %></li>
+<li class="list-group-item "><%= article.content %></li>
+<% end %>
+</ul>
+
+
